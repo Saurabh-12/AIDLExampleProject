@@ -16,9 +16,10 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".AdditionService">
+        <service android:name=".AdditionService"
+                 android:process = ":remote_proc">
             <intent-filter>
-                <action android:name="softsolution.sks.com.aidlexample.AdditionService" />
+                <action android:name="addition.service" />
             </intent-filter>
         </service>
 
