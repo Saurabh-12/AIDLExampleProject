@@ -81,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
     /** Binds this activity to the service. */
     private void initService() {
         connection = new AdditionServiceConnection();
-        Intent i = new Intent(IAdditionService.class.getName());
+        Intent i = new Intent();
+        i.setAction("addition.service");
         boolean ret = bindService(i, connection, Context.BIND_AUTO_CREATE);
         Log.d(TAG, "initService() bound with " + ret);
     }
