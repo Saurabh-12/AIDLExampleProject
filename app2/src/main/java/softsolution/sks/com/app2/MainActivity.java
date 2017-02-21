@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         connection = new AdditionServiceConnection();
         Intent i = new Intent();
         i.setAction("addition.service");
-        i.setPackage("softsolution.sks.com.aidlfile");
+        i.setPackage("softsolution.sks.com.aidlexample");
         boolean ret = bindService(i, connection, Context.BIND_AUTO_CREATE);
         Log.d(TAG, "initService() bound with " + ret);
     }
